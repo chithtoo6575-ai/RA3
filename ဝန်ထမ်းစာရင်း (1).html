@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ဝန်ထမ်းစာရင်း</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--blue:#1d4ed8;--blue2:#dbeafe;--yellow:#facc15;--yellow2:#fef9c3;--bg:#fff;--text:#0f172a;--line:#cbd5e1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--text:#f1f5f9;--line:#334155;--blue2:#1e3a8a;--yellow2:#422006}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,"Noto Sans Myanmar","Padauk",sans-serif}
+header{background:var(--blue);color:#fff;padding:16px;border-bottom:5px solid var(--yellow)}
+h1{margin:0;font-size:1.3rem}
+header p{margin:4px 0 0;font-size:.85rem;opacity:.9}
+header{position:relative}#addopen{position:absolute;right:12px;top:50%;transform:translateY(-50%)}
+#mdl{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:60;align-items:center;justify-content:center;padding:12px}#mdl.on{display:flex}#mdl .box{background:var(--bg);border:3px solid var(--yellow);border-radius:12px;padding:16px;width:100%;max-width:560px;max-height:90vh;overflow:auto}#mdl .row input,#mdl .row select{flex:1 1 45%}
+main{padding:12px;max-width:1100px;margin:auto}
+.panel{background:var(--yellow2);border:1px solid var(--yellow);border-radius:10px;padding:10px;margin-bottom:12px}
+.panel b{display:block;margin-bottom:6px;font-size:.85rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:2px solid var(--blue);background:var(--bg);color:var(--blue);border-radius:99px;padding:5px 12px;font-size:.85rem;cursor:pointer}
+.chip.on{background:var(--blue);color:#fff}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+input,select{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);font-size:.9rem;flex:1;min-width:140px}
+button.btn{background:var(--yellow);color:#000;border:0;border-radius:8px;padding:8px 14px;font-weight:600;cursor:pointer}
+button.btn.b{background:var(--blue);color:#fff}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th{background:var(--blue);color:#fff;padding:10px 8px;border:1px solid var(--line);white-space:nowrap}
+td{padding:8px;border:1px solid var(--line);text-align:center;white-space:nowrap}
+td.l{text-align:left;font-weight:600}
+tbody tr:nth-child(even){background:var(--blue2)}
+tbody tr:hover{background:var(--yellow2)}
+.th{width:48px;height:48px;object-fit:cover;border-radius:50%;border:2px solid var(--yellow);cursor:pointer;vertical-align:middle}.cam{cursor:pointer;font-size:1.2rem;padding:0 4px}#ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:50;align-items:center;justify-content:center}
+td input{width:140px;min-width:0;padding:4px;text-align:center}
+.x{border:0;background:transparent;cursor:pointer;font-size:1rem}
+.cnt{margin:8px 0;font-size:.85rem}
+.lay{display:flex;gap:14px;max-width:1300px}
+aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);max-height:calc(100vh - 16px);overflow-y:auto;z-index:5;width:210px;flex:none;background:var(--yellow2);border:1px solid var(--yellow);border-radius:10px;padding:10px;align-self:flex-start}
+aside b{display:block;margin-bottom:6px}
+.cl{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.cb{display:flex;align-items:center;gap:6px;text-align:left;border:2px solid var(--blue);background:var(--bg);color:var(--blue);border-radius:8px;padding:7px 10px;cursor:pointer;font-size:.9rem}
+.cb span{margin-left:auto;background:var(--yellow);color:#000;border-radius:99px;padding:0 8px;font-size:.8rem}
+.cb.on{background:var(--blue);color:#fff}
+.mn{flex:1;min-width:0}
+h2#ctt{margin:0 0 8px;color:var(--blue);border-left:6px solid var(--yellow);padding-left:8px;font-size:1.1rem}
+@media(max-width:760px){.lay{flex-direction:column}aside{width:100%;max-height:none;top:env(safe-area-inset-top,0px)}.cl{flex-direction:row;overflow-x:auto}.cb{white-space:nowrap}}
+.x.e{color:var(--blue)}.x.d{color:#dc2626}.x{padding:4px 8px;font-size:1.05rem}
+@media print{.panel,.x,.noprint{display:none}header{background:#fff;color:#000}}
+</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header><button class="btn noprint" id="addopen" onclick="openM()"><i class="fa-solid fa-plus"></i> Add</button><h1>ဝန်ထမ်းစာရင်း</h1><p>ဝန်ထမ်းအားလုံး · ပြချင်တာ/ဖျောက်ချင်တာ ရွေးနိုင်သည်</p></header>
+<main class="lay"><aside id="side" class="noprint"></aside><div class="mn">
+<div class="panel noprint">
+<b>ကော်လံများ ပြ/ဖျောက်</b>
+<div class="chips" id="cols"></div>
+<div class="row">
+<input id="q" placeholder="အမည်/နံပါတ် ရှာရန်...">
+<select id="bank"><option value="">ဘဏ်အားလုံး</option></select>
+<button class="btn" id="showall">ဖျက်ထားသူ အားလုံးပြန်ထည့်</button>
+<button class="btn b" onclick="window.print()">Print</button>
+</div>
+</div>
+<div id="mdl" class="noprint" onclick="if(event.target===this)closeM()"><div class="box"><button class="x" onclick="closeM()" style="float:right"><i class="fa-solid fa-xmark"></i></button><b>ဝန်ထမ်းအသစ် ထည့်ရန်</b><div class="row"><select id="n_city" title="City"></select><input id="n_dept" value="พระราม3" placeholder="Dept."><input id="n_en" placeholder="En. No."><input id="n_name" placeholder="အမည် (Name)"><input id="n_pp" placeholder="Passport ID"><input id="n_bank" list="bl" placeholder="Bank"><datalist id="bl"><option value="KTB"><option value="SCB"><option value="Kbank"><option value="Cash"></datalist><input id="n_acct" placeholder="Acct. No."><input id="n_ph" type="file" accept="image/*" title="Photo"><button class="btn" id="canbtn" style="display:none" onclick="cancelEdit()"><i class="fa-solid fa-xmark"></i></button><button class="btn b" id="addbtn" onclick="add()">ထည့်မည်</button></div></div>
+</div><div class="panel noprint" id="hl" style="display:none"></div>
+<h2 id="ctt"></h2>
+<div class="cnt" id="cnt"></div>
+<div class="wrap"><table><thead id="th"></thead><tbody id="tb"></tbody></table></div>
+</div></main>
+<div id="ov" onclick="this.style.display='none'"></div>
+<script>
+var D="53052630|KYAW MAUNG|KTB|6639562391;53052631|CHIT CHIT HTOO|KTB|6639624966;53052732|ZAR NI|KTB|6639624966;53052917|THANT ZIN|KTB|6639562391;53052927|KYAW SWAR LIN|KTB|6626966820;53052736|NAING KO LIN|SCB|3382713830;53052960|HLAING THU YA|KTB|6639624966;53052999|WIN AYE|KTB|6626966820;53053000|KHUN RA KHUM|KTB|6639624966;53053001|MG SAI KO OO|SCB|3382713830;53053002|MG MYO MIN KHAING|KTB|6639624966;53053003|AUNG MYO MIN|KTB|6639624966;53053170|LIN LATT AUNG|SCB|0952937028;53053415|THANG THAWN MUNG|KTB|6639624966;53053448|WAI PHYO AUNG|KTB|6639624966;53053484|TI ZAR LIN AUNG|KTB|6639624966;53053735|HTAY MIN|KTB|6639624966;53053737|WA NA AUNG|KTB|6639624966;53053754|TUN TUN NYEIN|KTB|6639624966;53053755|ARKAR LWIN|KTB|6639624966;53053777|ZIN MIN KO|KTB|6639624966;53053810|WIN WAI TUN|KTB|6797401968;53053811|LWIN MIN OO|KTB|6797401968;53053957|YA WAI AUNG|KTB|6639624966;53053959|AUNG NAING|KTB|6639624966;53054003|KAN KOUNG|Kbank|1948112643;53054004|MA MOE SAPAI|Kbank|1948112643;53054005|KYI KYI SWE|KTB|6626966820;53054048|AUNG THAR SAN|KTB|6639624966;53054049|KYAW THET|KTB|6639624966;53054128|MYA SOE NAING|Cash|;53054127|AUNG KAUNG THANT|Cash|;53054158|TA TUI|Cash|".split(";").map(function(s,i){var a=s.split("|");return{id:i+1,dept:"พระราม3",en:a[0],name:"นาย "+a[1],bank:a[2],acct:a[3]}});
+var C=[["id","Item"],["ph","Photo"],["dept","Dept."],["en","En. No."],["name","Name"],["pp","Passport ID"],["bank","Bank"],["acct","Acct. No."]];
+var hc={},hr={};
+var ex=[],pp={},ph={},ed={},eid=null,cur="",cities=["พระราม3"];try{cities=JSON.parse(localStorage.getItem("ct")||'["พระราม3"]');cur=localStorage.getItem("cur")||""}catch(e){}try{ed=JSON.parse(localStorage.getItem("ed")||"{}")}catch(e){}try{ph=JSON.parse(localStorage.getItem("ph")||"{}")}catch(e){}
+try{hc=JSON.parse(localStorage.getItem("hc")||"{}");hr=JSON.parse(localStorage.getItem("hr")||"{}");ex=JSON.parse(localStorage.getItem("ex")||"[]");pp=JSON.parse(localStorage.getItem("pp")||"{}")}catch(e){}
+D=D.concat(ex);D.forEach(function(r){if(!r.city)r.city=r.dept||"พระราม3"});D.forEach(function(r){if(ed[r.id])Object.assign(r,ed[r.id])});
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return"&#"+c.charCodeAt(0)+";"})}
+function save(){try{localStorage.setItem("hc",JSON.stringify(hc));localStorage.setItem("hr",JSON.stringify(hr));localStorage.setItem("ex",JSON.stringify(ex));localStorage.setItem("pp",JSON.stringify(pp))}catch(e){}try{localStorage.setItem("ct",JSON.stringify(cities));localStorage.setItem("cur",cur)}catch(e){}try{localStorage.setItem("ed",JSON.stringify(ed))}catch(e){}try{localStorage.setItem("ph",JSON.stringify(ph))}catch(e){}}
+var $=function(i){return document.getElementById(i)};
+var banks=[];D.forEach(function(r){if(banks.indexOf(r.bank)<0)banks.push(r.bank)});
+banks.forEach(function(b){var o=document.createElement("option");o.value=b;o.textContent=b;$("bank").appendChild(o)});
+function chips(){$("cols").innerHTML="";C.forEach(function(c){var b=document.createElement("button");b.className="chip"+(hc[c[0]]?"":" on");b.textContent=(hc[c[0]]?"✕ ":"✓ ")+c[1];b.onclick=function(){hc[c[0]]=!hc[c[0]];save();chips();draw()};$("cols").appendChild(b)})}
+function draw(){
+var vc=C.filter(function(c){return!hc[c[0]]});
+$("th").innerHTML="<tr>"+vc.map(function(c){return"<th>"+c[1]+"</th>"}).join("")+"<th class='noprint'></th></tr>";
+var q=$("q").value.toLowerCase(),bk=$("bank").value,n=0;
+$("tb").innerHTML=(cur?(grp()[cur]||[]):D).filter(function(r){return!hr[r.id]&&(!bk||r.bank===bk)&&(!q||(r.name+r.en+r.acct+(pp[r.id]||r.pp||"")).toLowerCase().indexOf(q)>=0)}).map(function(r){n++;
+return"<tr>"+vc.map(function(c){return"<td"+(c[0]=="name"?" class='l'":"")+">"+(c[0]=="ph"?photoCell(r):c[0]=="pp"?"<input value=\""+esc(pp[r.id]!==undefined?pp[r.id]:(r.pp||""))+"\" placeholder=\"Passport ID\" onchange=\"setpp("+r.id+",this.value)\">":esc(c[0]=="id"?n:r[c[0]]))+"</td>"}).join("")+"<td class='noprint'><button class='x e' title='Edit' onclick='edit("+r.id+")'><i class='fa-solid fa-pencil'></i></button><button class='x d' title='ဖျက်မယ်' onclick='hide("+r.id+")'><i class='fa-solid fa-trash'></i></button></td></tr>"}).join("");
+if(!n)$("tb").innerHTML="<tr><td colspan='9'>ဒီမြို့နယ်မှာ ဝန်ထမ်းမရှိသေးပါ</td></tr>";side();var h=Object.keys(hr).filter(function(k){return hr[k]}).length;
+$("cnt").textContent="ပြထားသူ "+n+" ဦး / စုစုပေါင်း "+D.length+" ဦး"+(h?" · ဖျက်ထား "+h+" ဦး":"");
+var hl=D.filter(function(r){return hr[r.id]&&(!cur||r.city===cur)});
+$("hl").style.display=hl.length?"block":"none";
+$("hl").innerHTML="<b>ဖျက်ထားသူများ — နှိပ်ရင် ပြန်ထည့်မယ်</b><div class='chips'>"+hl.map(function(r){return"<button class='chip' onclick='restore("+r.id+")'><i class='fa-solid fa-rotate-left'></i> "+r.name.replace('นาย ','')+"</button>"}).join("")+"</div>"}
+function hide(i){hr[i]=true;save();draw()}
+function restore(i){delete hr[i];save();draw()}
+function setpp(i,v){pp[i]=v.trim();save()}
+function shrink(f,cb){var fr=new FileReader();fr.onload=function(){var im=new Image();im.onload=function(){var m=Math.min(im.width,im.height),c=document.createElement("canvas");c.width=c.height=320;c.getContext("2d").drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,320,320);cb(c.toDataURL("image/jpeg",.8))};im.src=fr.result};fr.readAsDataURL(f)}
+function photoCell(r){var u=ph[r.id];var l="<label class='cam'>"+"<i class='fa-solid fa-camera'></i>"+"<input type='file' accept='image/*' hidden onchange='upph("+r.id+",this)'></label>";return(u?"<img class='th' src='"+u+"' onclick='big("+r.id+")'>":"")+l}
+function upph(i,inp){if(inp.files[0])shrink(inp.files[0],function(u){ph[i]=u;save();draw()})}
+function big(i){var o=$("ov");o.innerHTML="<div style='text-align:center'><img src='"+ph[i]+"' style='max-width:90vw;max-height:70vh;border:4px solid var(--yellow);border-radius:12px;background:#fff'><br><br><button class='btn' onclick='event.stopPropagation();delph("+i+")'>ပုံဖျက်မည်</button></div>";o.style.display="flex"}
+function delph(i){delete ph[i];save();$("ov").style.display="none";draw()}
+function openM(){if(eid===null&&cur)$("n_city").value=cur;$("mdl").classList.add("on")}
+function closeM(){$("mdl").classList.remove("on");cancelEdit()}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeM()});
+function grp(){var g={};D.forEach(function(r){(g[r.city]=g[r.city]||[]).push(r)});return g}
+function side(){D.forEach(function(r){if(cities.indexOf(r.city)<0)cities.push(r.city)});var g=grp(),cnt=function(a){return(a||[]).filter(function(r){return!hr[r.id]}).length};var s="<b>မြို့နယ်</b><div class='cl'><button class='cb"+(cur?"":" on")+"' onclick='setCity(-1)'><i class='fa-solid fa-layer-group'></i> အားလုံး <span>"+cnt(D)+"</span></button>";cities.forEach(function(c,i){s+="<button class='cb"+(cur===c?" on":"")+"' onclick='setCity("+i+")'><i class='fa-solid fa-location-dot'></i> "+esc(c)+" <span>"+cnt(g[c])+"</span></button>"});s+="</div><div class='row'><input id='nc' placeholder='မြို့နယ်အသစ်'><button class='btn b' onclick='addCity()'><i class='fa-solid fa-plus'></i></button></div>";if(cur&&!(g[cur]||[]).length)s+="<button class='btn' style='margin-top:8px;width:100%' onclick='delCity()'><i class='fa-solid fa-trash'></i></button>";$("side").innerHTML=s;var sel=$("n_city"),v=sel.value;sel.innerHTML=cities.map(function(c){return"<option>"+esc(c)+"</option>"}).join("");sel.value=cities.indexOf(v)>=0?v:(cur||cities[0]);$("ctt").textContent=cur||"အားလုံး"}
+function setCity(i){cur=i<0?"":cities[i];save();draw();if(cur)$("n_city").value=cur}
+function addCity(){var v=$("nc").value.trim();if(!v)return;if(cities.indexOf(v)<0)cities.push(v);cur=v;save();draw();$("n_city").value=v}
+function delCity(){cities=cities.filter(function(c){return c!==cur});cur="";if(!cities.length)cities=["พระราม3"];save();draw()}
+function edit(i){var r=D.filter(function(x){return x.id===i})[0];if(!r)return;eid=i;$("n_city").value=r.city;$("n_dept").value=r.dept||"";$("n_en").value=r.en||"";$("n_name").value=r.name||"";$("n_pp").value=pp[i]!==undefined?pp[i]:(r.pp||"");$("n_bank").value=r.bank||"";$("n_acct").value=r.acct||"";$("addbtn").innerHTML="<i class='fa-solid fa-floppy-disk'></i> Save";$("canbtn").style.display="";openM();$("n_name").focus()}
+function cancelEdit(){eid=null;["n_en","n_name","n_pp","n_acct","n_bank"].forEach(function(k){$(k).value=""});$("n_dept").value="พระราม3";$("addbtn").textContent="ထည့်မည်";$("canbtn").style.display="none"}
+function saveEdit(){var g=function(k){return $(k).value.trim()};if(!g("n_name"))return;var id=eid;var r=D.filter(function(x){return x.id===id})[0];var f={city:g("n_city"),dept:g("n_dept"),en:g("n_en"),name:g("n_name"),bank:g("n_bank"),acct:g("n_acct")};Object.assign(r,f);ed[id]=f;pp[id]=g("n_pp");var pf=$("n_ph").files[0];if(pf){shrink(pf,function(u){ph[id]=u;save();draw()})}$("n_ph").value="";save();closeM();draw()}
+function add(){if(eid!==null){return saveEdit()}var g=function(i){return $(i).value.trim()};if(!g("n_name")){alert("အမည် ထည့်ပါ");return}
+var r={city:g("n_city"),id:Math.max.apply(null,D.map(function(x){return x.id}))+1,dept:g("n_dept")||"พระราม3",en:g("n_en"),name:g("n_name"),bank:g("n_bank"),acct:g("n_acct"),pp:g("n_pp")};
+D.push(r);ex.push(r);if(cur&&cur!==r.city)cur=r.city;save();var pf=$("n_ph").files[0];if(pf){shrink(pf,function(u){ph[r.id]=u;save();draw()})}$("n_ph").value="";["n_en","n_name","n_pp","n_acct"].forEach(function(i){$(i).value=""});
+if(r.bank&&banks.indexOf(r.bank)<0){banks.push(r.bank);var o=document.createElement("option");o.value=o.textContent=r.bank;$("bank").appendChild(o)}closeM();draw()}
+$("showall").onclick=function(){hr={};hc={};save();chips();draw()};
+$("q").oninput=draw;$("bank").onchange=draw;
+chips();draw();
+</script>
+</body>
+</html>
